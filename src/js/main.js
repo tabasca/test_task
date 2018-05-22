@@ -40,6 +40,8 @@ if (!window.Promise) {
 		let to = from + PAGE_SIZE;
 
 		let container = document.createDocumentFragment();
+		let wrap = `<div class="row"></div>`;
+		container = container.appendChild(getElementFromTemplate(wrap));
 
 		items.slice(from, to).forEach(function(item) {
 			let itemHTML = getElementFromTemplate(getArticleHTML(item));
@@ -101,7 +103,11 @@ if (!window.Promise) {
 		if (evt.target.classList.contains(delBtnClass)) {
 			let articleItem = closestByClass(evt.target, articleItemClass);
 
-			articleItem.parentNode.removeChild(articleItem);
+			if (articleItem.parentNode.children.length === 1) {
+				articleItem.parentNode.parentNode.removeChild(articleItem.parentNode);
+			} else {
+				articleItem.parentNode.removeChild(articleItem);
+			}
 		}
 	})
 

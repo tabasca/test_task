@@ -16,15 +16,18 @@ html, body {
 
 .wrapper {
 	position: relative;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	flex-wrap: wrap;
 
 	width: calc(100% - 20px);
 	margin-top: 20px;
 	margin-bottom: 20px;
 	right: -20px;
+}
+
+.row {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	flex-wrap: wrap;
 }
 
 .btn {

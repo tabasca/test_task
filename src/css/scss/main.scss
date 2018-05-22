@@ -5,12 +5,13 @@
 html, body {
 	height: 100%;
 	width: 100%;
-	//background: black;
 	font-family: 'Arial', Helvetica, sans-serif;
 }
 
 .main {
 	display: block;
+	max-width: 1400px;
+	margin: 0 auto;
 }
 
 .wrapper {
@@ -20,11 +21,10 @@ html, body {
 	justify-content: space-between;
 	flex-wrap: wrap;
 
-	width: 1020px;
-	margin: 0 auto;
+	width: calc(100% - 20px);
 	margin-top: 20px;
 	margin-bottom: 20px;
-	right: -18px;
+	right: -20px;
 }
 
 .btn {
